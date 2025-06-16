@@ -1,0 +1,59 @@
+import java.util.Hashset;
+public class App
+{
+	public static void main(String[] args) {
+		class Edge {
+			int src;
+			int dest;
+			int weight;
+			Edge(int src,int dest,int weight) {
+				this.src = src;
+				this.dest = dest;
+				this.weight = weight;
+			}
+			Edge(int src,int dest) {
+				this.src = src;
+				this.dest = dest;
+				this.weught = 1;
+			}
+		}
+		class Graph {
+			Hashset<Edge>graph;
+			int vertices;
+			boolean isDirected;
+			Graph(int vertices,boolean isdirected) {
+				this.vertices = vertices;
+				this.isDirected = isDirected;
+				graph = new Hashset<Edge>();
+			}
+			public void addEdge(int src,int dest) {
+				if(isvalid(src,dest)) {
+					Edge e = new edge(src,dest);
+					graph.add(e);
+					if(!isDirected) {
+						Edge e2 = new Edge(dest,src);
+						graph.add(e2);
+					}
+				} else {
+					System.out.println("invlid source and destination");
+				}
+			}
+			public void addEdge(int src,int dest,int weight) {
+				if(isvalid(src,dest)) {
+					edge e = new Edge(src,dest,weight);
+					graph.add(e);
+					if(!isDirected) {
+						var e2 = new Edge(dest,src,weight);
+						graph.add(e2);
+					}
+				} else {
+					System.out.println("invalid source and destintion");
+				}
+			}
+			public boolean isvalid(int src,int dest) {
+				teturn src>=0 && dest>=0 && src<vertices && dest<vertices && src!=dest;
+			}
+		}
+		System.out.println("Hello World");
+	}
+}

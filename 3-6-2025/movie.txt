@@ -1,0 +1,27 @@
+public class Movie {
+        String name;
+        int rating;
+        String duration;
+        Movie(String name,int rating,String duration){
+            this.name = name;
+            this.rating = rating;
+            this.duration = duration;
+        }
+        public boolean is_hit(){
+            if(rating>7){
+                return true;
+            }
+            return false;
+        }
+        public void details() {
+            System.out.println("name of the movie:"+name);
+            System.out.println("rating out of 10:"+rating);
+            System.out.println(" movie duration in hh:"+duration);
+            System.out.println("if movie hit:"+ is_hit());
+        }
+    
+        public static void main (String[] args){
+            Movie cinema = new Movie("sakhi",8,"2h");
+            cinema.details();
+        }
+    }

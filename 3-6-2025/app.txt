@@ -1,0 +1,38 @@
+public class Application {
+    String name;
+    String catagory;
+    int download;
+    String reviews;
+    public Application(String name,String catagory,int download,String reviews)
+    {
+        this.name = name;
+        this.catagory = catagory;
+        this.download = download;
+        this.reviews = reviews;
+    }
+    public void is_popular(){
+        if(download >= 800){
+            System.out.println("more popular");
+        }
+        else if (download < 800){
+            System.out.println("medium popular");
+        }
+        else
+        System.out.println("less population");
+    }
+}
+  public void get_summary() {
+    System.out.println("name:"+name);
+    System.out.println("catagory:"+catagory);
+    System.out.println("download:"+download);
+    System.out.println("reviews:"+reviews);
+  }
+  public static void main (String[] args) {
+    Application app = new
+    Application("insta","entertainment",756,"no views");
+    app.is_popular();
+    app.get_summary();
+  }
+        
+    
+      

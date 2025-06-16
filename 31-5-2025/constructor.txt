@@ -1,0 +1,31 @@
+public class teacher {
+    String name;
+    String id;
+    String[] subjects;
+    String dept;
+    String qualification;
+    teacher(String name,String id,String dept,String qualificaton,String[] subjects){
+        this.name = mane;
+        this.id = id;
+        this.dept = dept;
+        this.qualification = quqlification;
+        this.subjects = subjects;
+        void details(); {
+            System.out.println
+              System.out.println("teacher name:"+name);
+              System.out.println("id:"+id);
+              System.out.println("department:"+dept);
+              System.out.println("quqlification:"+qualification);
+              System.out.println(s+"subjects:");
+              for (String subject:subjects) {
+                   System.out.print(subjects +",");
+        }
+         System.out.println();
+    }
+}
+public class main {
+    public static void main (String[] args) {
+        teacher t1 = new teacher("rani","235d7a6","ece","m.tech",new String[]{"c","java"});
+        t1.details();{
+    }
+}
